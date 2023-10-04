@@ -8,6 +8,11 @@ module.exports = {
 			},
 			backgroundImage: {
 				'pattern': "url('/Crosshatch.webp')",
+			},
+			fontFamily: {
+				'plexsans': ['"IBM Plex Sans"', 'sans-serif'],
+				'plexmono': ['"IBM Plex Mono"', 'monospace'],
+				'plexserif': ['"IBM Plex Serif"', 'serif'],
 			}
 		},
 	},

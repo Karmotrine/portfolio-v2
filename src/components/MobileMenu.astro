@@ -11,6 +11,12 @@ const NavTextStyle = `flex bg-white text-black px-2 py-[2px]`
 <nav
     class=`${className}`
     x-data="{page: window.location.pathname}"
+    @resize.window=`
+        width = (window.innerWidth > 0 ) ? window.innerWidth : screen.width;
+        if (width > 425) {
+            toggleState = false;
+        }
+    `
 >
     <a href="/about">
         <div class=`${NavLinkStyle}` :class="page === '/about' ? 'bg-white' : ''">
