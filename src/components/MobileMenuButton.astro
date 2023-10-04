@@ -1,0 +1,30 @@
+---
+interface Props {
+    className?: string;
+}
+
+const { className } = Astro.props;
+const defaultHamburgerStyle = "h-1 w-6 my-1 rounded-full bg-white transition ease transform duration-300"
+---
+
+<button 
+    id="mobile-menu"
+    class=`${className}`
+    @click="toggleState = !toggleState"
+>
+    <div 
+        id="ham-1" 
+        class=`${defaultHamburgerStyle}`
+        :class="toggleState ? 'rotate-45 translate-y-3 opacity-50 group-hover:opacity-100' : ''"
+    ></div>
+    <div 
+        id="ham-2" 
+        class=`${defaultHamburgerStyle}`
+        :class="toggleState ? 'opacity-0' : ''"
+    ></div>
+    <div 
+        id="ham-3" 
+        class=`${defaultHamburgerStyle}`
+        :class="toggleState ? '-rotate-45 -translate-y-3 opacity-50 group-hover:opacity-100' : ''"
+    ></div>
+</button>

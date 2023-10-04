@@ -1,0 +1,30 @@
+---
+interface Props {
+    className?: string;
+}
+
+const { className } = Astro.props;
+const NavLinkStyle = `border-b border-black px-4 py-8`
+const NavTextStyle = `flex bg-white text-black px-2 py-[2px]`
+---
+
+<nav
+    class=`${className}`
+    x-data="{page: window.location.pathname}"
+>
+    <a href="/about">
+        <div class=`${NavLinkStyle}` :class="page === '/about' ? 'bg-white' : ''">
+            <span class=`${NavTextStyle}`>about</span>
+        </div>
+    </a>
+    <a href="/experience">
+        <div class=`${NavLinkStyle}` :class="page === '/experience' ? 'bg-white' : ''">
+            <span class=`${NavTextStyle}`>experience</span>
+        </div>
+    </a>
+    <a href="/projects">
+        <div class=`${NavLinkStyle}` :class="page === '/projects' ? 'bg-white' : ''">
+            <span class=`${NavTextStyle}`>projects</span>
+        </div>
+    </a>
+</nav>
