@@ -49,24 +49,41 @@ import { ViewTransitions } from 'astro:transitions';
     class="font-plexmono"
   >
     <header
-      class="flex pl-4 mx-6 mt-3 border border-black h-12 justify-between items-center md:mx-12 md:mt-6 text-sm"
+      class="flex pl-4 mx-6 mt-3 border border-black h-12 justify-between items-center md:mx-12 md:mt-6"
     >
-      <span class="flex h-full items-center"> Yuanurena.</span>
+      <span class="flex h-full items-center text-xs"> Yuan Urena</span>
       <nav class="hidden flex-row h-full md:flex">
-        <li class="flex border-black border-x px-6 h-full items-center">
-          <a href="/about">about</a>
-        </li>
-        <li class="flex border-black border-r px-6 h-full items-center">
-          <a href="/experience">experience</a>
-        </li>
-        <li class="flex border-black border-r px-6 h-full items-center">
-          <a href="/projects">projects</a>
-        </li>
+        <ul class="hidden flex-row h-full md:flex text-xs">
+          <a href="/about">
+            <li class="border-black border-x px-6 py-2 h-full items-center lg:min-w-[14em] ">
+              <span class="text-[12px]">01</span>
+              <p>about</p>
+            </li>
+          </a>
+          <a href="/experience">
+            <li class=" border-black border-r px-6 py-2 h-full items-center lg:min-w-[14em]">
+              <span class="text-[12px]">02</span>
+              <p>experience</p>
+            </li>
+          </a>
+          <a href="/projects">
+            <li class=" border-black border-r px-6 py-2 h-full items-center lg:min-w-[14em]">
+              <span class="text-[12px]">03</span>
+              <p>projects</p>
+            </li>
+          </a>
+        </ul>
       </nav>
       <div
         class="flex bg-black text-white h-full items-center px-4 md:pr-4 md:pl-4"
       >
-        <span class="hidden md:block">resume</span>
+        <a 
+          class="hidden md:block text-xs"
+          href="https://drive.google.com/file/d/1Kil2AUFsStqRGHOLEaSPj65leIdaGdWW/view?usp=sharing"
+          target="_blank"
+        >
+          resume
+        </a>
         <MobileMenuButton
           className="flex md:hidden flex-col h-12 w-12 border-2 border-black rounded justify-center items-center group"
         />
@@ -81,16 +98,12 @@ import { ViewTransitions } from 'astro:transitions';
       </template >
     </div>
   </body>
-  <footer class="bg-black mx-6 mb-3 text-white text-xs md:mx-12 md:mb-6">
-    <div
-      class="border-x border-b border-black px-2 py-2 flex flex-row justify-between"
-    >
-      <span>
-        <a href="https://github.com/karmotrine" target="_blank">github</a> | <a href="https://www.linkedin.com/in/yururena" target="_blank">linkedin</a>
-      </span>
-      <span>
-        © 2021 Yuan Urena
-      </span>
-    </div>
+  <footer class="bg-black mx-6 mb-3 text-white text-xs border-x border-b border-black px-2 py-2 flex flex-row justify-between md:mx-12 md:mb-6">
+    <span>
+      <a href="https://github.com/karmotrine" target="_blank">github</a> | <a href="https://www.linkedin.com/in/yururena" target="_blank">linkedin</a>
+    </span>
+    <span>
+      2023
+    </span>
   </footer>
 </html>
